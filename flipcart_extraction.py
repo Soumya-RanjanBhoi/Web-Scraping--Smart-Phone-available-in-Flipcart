@@ -35,7 +35,7 @@ class SmartPhone(webdriver.Chrome):
                 wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'tUxRFH')))
                 time.sleep(2)
             except TimeoutException:
-                print("⏳ Timeout: Products didn't load.")
+                print("Timeout.")
                 continue
 
             soup = BeautifulSoup(self.page_source, 'html.parser')
